@@ -46,7 +46,7 @@
       <section style="font-size:15px; line-height:1.85; color:#d1d5db;">
         
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">一、远程桌面与交互式终端的交互时延敏感特性</h2>
-        <p>与看视频或下载大文件不同，远程桌面控制与SSH命令行属于强交互型任务。用户敲下一个按键或移动一下鼠标，都必须等待数据包飞越重洋并在远端主机渲染回传，即必须经历完整的往返RTT时延。当公网发生偶发性丢包时，画面撕裂与按键吞没将直接导致运维失误风险剧增。不少运维团队在选用专用的<a href="https://dajichang.mom/" target="_blank" style="color:#4ade80; font-weight:700; text-decoration:underline;">国际高速网络通道</a>时，核心诉求就是将跨洋远程桌面的控制延迟压缩至与本地操作无异的舒适区间。</p>
+        <p>与看视频或下载大文件不同，远程桌面控制与SSH命令行属于强交互型任务。用户敲下一个按键或移动一下鼠标，都必须等待数据包飞越重洋并在远端主机渲染回传，即必须经历完整的往返RTT时延。当公网发生偶发性丢包时，画面撕裂与按键吞没将直接导致运维失误风险剧增。不少运维团队在选用专用的<a href="https://dajichang.mom/" target="_blank" style="color:#4ade80; font-weight:700; text-decoration:underline;">远程运维专用线路</a>时，核心诉求就是将跨洋远程桌面的控制延迟压缩至与本地操作无异的舒适区间。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">二、启用 Windows RDP UDP 传输模式与帧率解锁</h2>
         <p>微软现代RDP协议默认支持TCP与UDP双栈模式。通过在本地组策略编辑器中开启'允许对RDP客户端使用UDP'选项，并配置自适应图像质量编码，能使远程桌面在遭遇公网微抖动时依靠UDP的快速交付特性保持光标顺畅。此外，修改注册表将RDP渲染帧率由默认的30FPS解锁至60FPS，能够带来质的飞跃般的跟手感。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">三、SSH 终端会话 KeepAlive 保活与光标延迟消解</h2>

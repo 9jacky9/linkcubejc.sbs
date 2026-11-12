@@ -46,7 +46,7 @@
       <section style="font-size:15px; line-height:1.85; color:#d1d5db;">
         
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">一、主动探针扫描的工作原理与传统协议破绽</h2>
-        <p>在复杂的网络对抗环境中，审查防火墙在拦截到疑似代理的未知流量时，会主动伪装成普通客户端向目标服务器IP和端口回放特定探测报文(Active Probing)。如果目标服务器直接切断连接或返回非标准的错误应答，系统便会判定其为代理节点并执行阻断。在阅读专业<a href="https://dajichang.mom/" target="_blank" style="color:#4ade80; font-weight:700; text-decoration:underline;">跨境专线选型指南</a>时，深入理解这一攻防博弈逻辑，是评估网络通道是否具备长期抗封锁生存能力的关键前提。</p>
+        <p>在复杂的网络对抗环境中，审查防火墙在拦截到疑似代理的未知流量时，会主动伪装成普通客户端向目标服务器IP和端口回放特定探测报文(Active Probing)。如果目标服务器直接切断连接或返回非标准的错误应答，系统便会判定其为代理节点并执行阻断。在阅读专业<a href="https://dajichang.mom/" target="_blank" style="color:#4ade80; font-weight:700; text-decoration:underline;">高防伪装加密隧道</a>时，深入理解这一攻防博弈逻辑，是评估网络通道是否具备长期抗封锁生存能力的关键前提。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">二、TLS 握手特征指纹(JA3/JA4)与 uTLS 伪装反制</h2>
         <p>现代深度包检测(DPI)系统通过分析TLS握手阶段ClientHello中的密码套件列表、扩展字段及椭圆曲线顺序，能够计算出独一无二的JA3/JA4指纹。由Go语言原生编写的传统代理客户端往往带有鲜明的语言特征指纹。现代防护协议全面引入uTLS库，能够完美模拟真实Chrome浏览器或iOS移动端Safari的指纹顺序，使审查系统根本无法将代理流量与普通合法网页流量区分开来。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">三、回落机制(Fallback)与真实合规伪装站点搭建</h2>
